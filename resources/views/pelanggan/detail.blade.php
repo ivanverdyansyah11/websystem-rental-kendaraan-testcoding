@@ -24,7 +24,7 @@
             <div class="col-12">
                 <form class="form d-inline-block w-100">
                     <div class="row">
-                        <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ $pelanggan->foto_ktp ? asset('assets/img/ktp-images/' . $pelanggan->foto_ktp) : asset('assets/img/default/image-notfound.svg') }}"
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ $pelanggan->foto_kk ? asset('assets/img/kk-images/' . $pelanggan->foto_kk) : asset('assets/img/default/image-notfound.svg') }}"
@@ -41,65 +41,65 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nama">Nama</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="nama">Nama</p>
                                     <input type="text" id="nama" class="input" autocomplete="off" disabled
                                         value="{{ $pelanggan->nama }}">
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nik">NIK</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="nik">NIK</p>
                                     <input type="text" id="nik" class="input" autocomplete="off" disabled
                                         value="{{ $pelanggan->nik }}">
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nomor_telepon">Nomor Telepon</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="nomor_telepon">Nomor Telepon</p>
                                     <input type="text" id="nomor_telepon" class="input" autocomplete="off" disabled
-                                        value="{{ $pelanggan->nomor_telepon }}">
+                                        value="{{ $pelanggan->nomor_telepon ? $pelanggan->nomor_telepon : '-' }}">
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nomor_ktp">Nomor KTP</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="nomor_ktp">Nomor KTP</p>
                                     <input type="text" id="nomor_ktp" class="input" autocomplete="off" disabled
-                                        value="{{ $pelanggan->nomor_ktp }}">
+                                        value="{{ $pelanggan->nomor_ktp ? $pelanggan->nomor_ktp : '-' }}">
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nomor_kk">Nomor KK</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="nomor_kk">Nomor KK</p>
                                     <input type="text" id="nomor_kk" class="input" autocomplete="off" disabled
-                                        value="{{ $pelanggan->nomor_kk }}">
+                                        value="{{ $pelanggan->nomor_kk ? $pelanggan->nomor_kk : '-' }}">
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="alamat">Alamat</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="alamat">Alamat</p>
                                     <input type="text" id="alamat" class="input" autocomplete="off" disabled
                                         value="{{ $pelanggan->alamat }}">
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="data_ktp">Data KTP</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="data_ktp">Data KTP</p>
                                     <input type="text" id="data_ktp" class="input" autocomplete="off" disabled
                                         value="{{ $pelanggan->data_ktp }}">
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="data_kk">Data KK</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="data_kk">Data KK</p>
                                     <input type="text" id="data_kk" class="input" autocomplete="off" disabled
                                         value="{{ $pelanggan->data_kk }}">
                                 </div>
                             </div>
-                            <div class="col-md-6 row-button">
-                                <div class="input-wrapper">
-                                    <label for="data_nomor_telepon">Data Nomor Telepon</label>
+                            <div class="col-md-6 mb-4">
+                                <div class="input-group">
+                                    <p for="data_nomor_telepon">Data Nomor Telepon</p>
                                     <input type="text" id="data_nomor_telepon" class="input" autocomplete="off"
                                         disabled value="{{ $pelanggan->data_nomor_telepon }}">
                                 </div>

@@ -26,30 +26,30 @@
                     enctype="multipart/form-data">
                     @csrf
                     <div class="row">
-                        <div class="col-md-4 mb-4">
-                            <div class="input-wrapper">
-                                <label for="waktu_sewa_hari">Total Harian</label>
+                        <div class="col-md-4 mb-3">
+                            <div class="input-group">
+                                <p for="waktu_sewa_hari">Total Harian</p>
                                 <input type="number" id="waktu_sewa_hari" class="input" autocomplete="off"
                                     value="{{ old('total_harian') ?: '0' }}" name="total_harian" required>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="input-wrapper">
-                                <label for="waktu_sewa_minggu">Total Mingguan</label>
+                        <div class="col-md-4 mb-3">
+                            <div class="input-group">
+                                <p for="waktu_sewa_minggu">Total Mingguan</p>
                                 <input type="number" id="waktu_sewa_minggu" class="input" autocomplete="off"
                                     value="{{ old('total_mingguan') ?: '0' }}" name="total_mingguan" required>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="input-wrapper">
-                                <label for="waktu_sewa_bulan">Total Bulanan</label>
+                        <div class="col-md-4 mb-3">
+                            <div class="input-group">
+                                <p for="waktu_sewa_bulan">Total Bulanan</p>
                                 <input type="number" id="waktu_sewa_bulan" class="input" autocomplete="off"
                                     value="{{ old('total_bulanan') ?: '0' }}" name="total_bulanan" required>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="tanggal_mulai">Tanggal Diambil</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="tanggal_mulai">Tanggal Diambil</p>
                                 <input type="date" id="tanggal_mulai" class="input" autocomplete="off"
                                     name="tanggal_mulai" value="{{ old('tanggal_mulai') }}" required>
                                 @error('tanggal_mulai')
@@ -57,9 +57,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="tanggal_akhir">Tanggal Kembali</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="tanggal_akhir">Tanggal Kembali</p>
                                 <input type="date" id="tanggal_akhir" class="input" autocomplete="off"
                                     name="tanggal_akhir" value="{{ old('tanggal_akhir') }}" required readonly>
                                 @error('tanggal_akhir')
@@ -67,9 +67,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="pelanggans_id">Pelanggan</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="pelanggans_id">Pelanggan</p>
                                 <select id="pelanggans_id" class="input" name="pelanggans_id" required>
                                     <option value="">Pilih tanggal diambil dahulu</option>
                                     {{-- @foreach ($pelanggans as $pelanggan)
@@ -83,9 +83,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="sopirs_id">Sopir</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="sopirs_id">Sopir</p>
                                 <select id="sopirs_id" class="input" name="sopirs_id">
                                     @if ($sopirs->count() == 0)
                                         <option value="">Tidak ada sopir ready</option>
@@ -103,9 +103,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="jenis_kendaraan">Jenis Kendaraan</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="jenis_kendaraan">Jenis Kendaraan</p>
                                 <select id="jenis_kendaraan" class="input">
                                     <option value="0">Pilih tanggal diambil dahulu</option>
                                     {{-- @foreach ($jenises as $jenis)
@@ -115,9 +115,9 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="brand_kendaraan">Brand Kendaraan</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="brand_kendaraan">Brand Kendaraan</p>
                                 <select id="brand_kendaraan" class="input">
                                     <option value="0">Pilih tanggal diambil dahulu</option>
                                     {{-- @foreach ($brands as $brand)
@@ -127,9 +127,9 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="seri_kendaraans_id">Nomor Seri</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="seri_kendaraans_id">Nomor Seri</p>
                                 <select id="seri_kendaraans_id" class="input" name="seri_kendaraans_id"
                                     data-target="#seri_kendaraans_id">
                                     <option value="0">Pilih tanggal diambil dahulu</option>
@@ -144,9 +144,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 row-button">
-                            <div class="input-wrapper">
-                                <label for="kendaraans_id">Kendaraan</label>
+                        <div class="col-md-6 mb-4">
+                            <div class="input-group">
+                                <p for="kendaraans_id">Kendaraan</p>
                                 <select id="kendaraans_id" class="input" name="kendaraans_id" required>
                                     <option value="">Pilih tanggal diambil dahulu</option>
                                     {{-- @foreach ($kendaraans as $kendaraan)

@@ -26,7 +26,7 @@
                     enctype="multipart/form-data">
                     @csrf
                     <div class="row">
-                        <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ asset('assets/img/default/image-notfound.svg') }}"
@@ -43,7 +43,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ asset('assets/img/default/image-notfound.svg') }}"
@@ -61,9 +61,9 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nama">Nama</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="nama">Nama</p>
                                     <input type="text" id="nama" class="input" required autocomplete="off"
                                         name="nama" value="{{ old('nama') }}">
                                     @error('nama')
@@ -71,9 +71,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nik">NIK</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="nik">NIK</p>
                                     <input type="number" id="nik" class="input" required autocomplete="off"
                                         name="nik" value="{{ old('nik') }}">
                                     @error('nik')
@@ -81,9 +81,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nomor_telepon">Nomor Telepon</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="nomor_telepon">Nomor Telepon</p>
                                     <input type="number" id="nomor_telepon" class="input" autocomplete="off"
                                         name="nomor_telepon" value="{{ old('nomor_telepon') }}">
                                     @error('nomor_telepon')
@@ -91,9 +91,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nomor_ktp">Nomor KTP</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="nomor_ktp">Nomor KTP</p>
                                     <input type="number" id="nomor_ktp" class="input" autocomplete="off" name="nomor_ktp"
                                         value="{{ old('nomor_ktp') }}">
                                     @error('nomor_ktp')
@@ -101,9 +101,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nomor_kk">Nomor KK</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="nomor_kk">Nomor KK</p>
                                     <input type="number" id="nomor_kk" class="input" autocomplete="off" name="nomor_kk"
                                         value="{{ old('nomor_kk') }}">
                                     @error('nomor_kk')
@@ -111,9 +111,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="alamat">Alamat</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="alamat">Alamat</p>
                                     <input type="text" id="alamat" class="input" required autocomplete="off"
                                         name="alamat" value="{{ old('alamat') }}">
                                     @error('alamat')
@@ -121,9 +121,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="data_ktp">Data KTP</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="data_ktp">Data KTP</p>
                                     <select name="data_ktp" class="input" id="data_ktp" required>
                                         <option value="">Pilih kelengkapan ktp</option>
                                         <option value="benar" {{ old('data_ktp') == 'benar' ? 'selected' : '' }}>Sudah
@@ -136,9 +136,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="data_kk">Data KK</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="data_kk">Data KK</p>
                                     <select name="data_kk" class="input" id="data_kk" required>
                                         <option value="">Pilih kelengkapan kk</option>
                                         <option value="benar" {{ old('data_kk') == 'benar' ? 'selected' : '' }}>Sudah
@@ -151,9 +151,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 row-button">
-                                <div class="input-wrapper">
-                                    <label for="data_nomor_telepon">Data Nomor Telepon</label>
+                            <div class="col-md-6 mb-4">
+                                <div class="input-group">
+                                    <p for="data_nomor_telepon">Data Nomor Telepon</p>
                                     <select name="data_nomor_telepon" class="input" id="data_nomor_telepon" required>
                                         <option value="">Pilih kelengkapan nomor telepon</option>
                                         <option value="benar"
