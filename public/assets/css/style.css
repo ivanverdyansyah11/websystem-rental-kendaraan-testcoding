@@ -545,7 +545,7 @@ body {
 /* MODAL STYLE */
 .modal .modal-content {
     padding: 42px;
-    border-radius: 18px;
+    border-radius: 8px;
     background-color: rgba(var(--light-color), 1);
     border: var(--border-style);
 }
@@ -562,7 +562,7 @@ body {
 
 .modal .caption-description {
     font-size: 0.938rem;
-    color: rgba(var(--dark-color), 0.52);
+    color: rgba(var(--dark-color), 0.72);
 }
 
 .modal .row-button {
@@ -681,9 +681,19 @@ form .input-group input:not(:placeholder-shown) ~ label > span {
     display: none;
 }
 
+.content form .input-group > input {
+    padding: 16px;
+}
+
+.content form .input-group > p {
+    font-size: 0.913rem;
+    margin-bottom: 6px;
+    color: rgba(var(--dark-color), 1);
+}
+
 .input-group .caption-error {
-    font-size: 0.813rem;
-    color: rgba(var(--red-color), 1);
+    font-size: 0.813rem !important;
+    color: rgba(var(--red-color), 1) !important;
 }
 
 .login .button-primary {
@@ -711,7 +721,7 @@ form .input-group input:not(:placeholder-shown) ~ label > span {
 .button-reverse,
 .button-primary-full {
     padding: 12px 16px;
-    border-radius: var(--rounded-md);
+    border-radius: var(--rounded-sx);
     background-color: rgba(var(--primary-color), 1);
     color: rgba(var(--light-color), 1);
     text-align: center;
@@ -770,7 +780,7 @@ form .input-group input:not(:placeholder-shown) ~ label > span {
 .table-default {
     border: var(--border-style);
     width: 100%;
-    border-radius: var(--rounded-xl) !important;
+    border-radius: var(--rounded-sx) !important;
     margin: 0;
 }
 
@@ -780,8 +790,8 @@ form .input-group input:not(:placeholder-shown) ~ label > span {
 
 .table-default .table-header {
     background-color: rgba(var(--dark-color), 1);
-    border-top-left-radius: var(--rounded-xl) !important;
-    border-top-right-radius: var(--rounded-xl) !important;
+    border-top-left-radius: var(--rounded-sx) !important;
+    border-top-right-radius: var(--rounded-sx) !important;
     padding: 20px 24px;
 }
 
@@ -910,7 +920,7 @@ form .input-group input:not(:placeholder-shown) ~ label > span {
     position: relative;
     width: 100%;
     padding: 16px;
-    border-radius: var(--rounded-md);
+    border-radius: var(--rounded-sx);
     border: var(--border-style);
     background-color: rgba(var(--dark-color), 0.03);
     font-size: 0.875rem;
@@ -921,7 +931,7 @@ form .input-group input:not(:placeholder-shown) ~ label > span {
     position: relative;
     width: 100%;
     padding: 16px 18px 16px 42px;
-    border-radius: var(--rounded-md);
+    border-radius: var(--rounded-sx);
     border: var(--border-style);
     background-color: rgba(var(--dark-color), 0.03);
     font-size: 0.875rem;
@@ -1018,7 +1028,7 @@ form .input-group input:not(:placeholder-shown) ~ label > span {
 .modal-other {
     width: 100%;
     padding: 4px 0;
-    border-radius: var(--rounded-lg);
+    border-radius: var(--rounded-sm);
     border: var(--border-style);
     background-color: rgba(var(--light-color), 1);
     gap: 4px;
@@ -1032,7 +1042,7 @@ form .input-group input:not(:placeholder-shown) ~ label > span {
 .modal-other.modal-big {
     width: 300px;
     padding: 24px;
-    border-radius: var(--rounded-lg);
+    border-radius: var(--rounded-md);
     border: var(--border-style);
     background-color: rgba(var(--light-color), 1);
     position: absolute;

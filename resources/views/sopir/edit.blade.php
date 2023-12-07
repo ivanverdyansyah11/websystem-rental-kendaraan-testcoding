@@ -26,7 +26,7 @@
                     action="{{ route('sopir.update', $sopir->id) }}">
                     @csrf
                     <div class="row">
-                        <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ $sopir->foto_ktp ? asset('assets/img/ktp-images/' . $sopir->foto_ktp) : asset('assets/img/default/image-notfound.svg') }}"
@@ -43,7 +43,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ $sopir->foto_sim ? asset('assets/img/sim-images/' . $sopir->foto_sim) : asset('assets/img/default/image-notfound.svg') }}"
@@ -61,69 +61,81 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nama">Nama</label>
-                                    <input type="text" id="nama" class="input" required autocomplete="off"
-                                        value="{{ $sopir->nama }}" name="nama">
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p>Nama Pengguna</p>
+                                    <input type="text" id="nama" autocomplete="off" value="{{ $sopir->nama }}" name="nama">
+                                    <label for="nama" class="d-flex align-items-center">
+                                        <span>Masukkan nama pengguna</span>
+                                    </label>
                                     @error('nama')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nik">NIK</label>
-                                    <input type="number" id="nik" class="input" required autocomplete="off"
-                                        value="{{ $sopir->nik }}" name="nik">
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p>NIK</p>
+                                    <input type="text" id="nik" autocomplete="off" value="{{ $sopir->nik }}" name="nik">
+                                    <label for="nik" class="d-flex align-items-center">
+                                        <span>Masukkan nik</span>
+                                    </label>
                                     @error('nik')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nomor_telepon">Nomor Telepon</label>
-                                    <input type="number" id="nomor_telepon" class="input" autocomplete="off"
-                                        value="{{ $sopir->nomor_telepon }}" name="nomor_telepon">
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p>Nomor Telepon</p>
+                                    <input type="text" id="nomor_telepon" autocomplete="off" value="{{ $sopir->nomor_telepon }}" name="nomor_telepon">
+                                    <label for="nomor_telepon" class="d-flex align-items-center">
+                                        <span>Masukkan nomor telepon</span>
+                                    </label>
                                     @error('nomor_telepon')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nomor_ktp">Nomor KTP</label>
-                                    <input type="number" id="nomor_ktp" class="input" autocomplete="off"
-                                        value="{{ $sopir->nomor_ktp }}" name="nomor_ktp">
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p>Nomor KTP</p>
+                                    <input type="text" id="nomor_ktp" autocomplete="off" value="{{ $sopir->nomor_ktp }}" name="nomor_ktp">
+                                    <label for="nomor_ktp" class="d-flex align-items-center">
+                                        <span>Masukkan nomor ktp</span>
+                                    </label>
                                     @error('nomor_ktp')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nomor_sim">Nomor SIM</label>
-                                    <input type="number" id="nomor_sim" class="input" autocomplete="off"
-                                        value="{{ $sopir->nomor_sim }}" name="nomor_sim">
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p>Nomor SIM</p>
+                                    <input type="text" id="nomor_sim" autocomplete="off" value="{{ $sopir->nomor_sim }}" name="nomor_sim">
+                                    <label for="nomor_sim" class="d-flex align-items-center">
+                                        <span>Masukkan nomor sim</span>
+                                    </label>
                                     @error('nomor_sim')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="alamat">Alamat</label>
-                                    <input type="text" id="alamat" class="input" required autocomplete="off"
-                                        value="{{ $sopir->alamat }}" name="alamat">
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p>Alamat</p>
+                                    <input type="text" id="alamat" autocomplete="off" value="{{ $sopir->alamat }}" name="alamat">
+                                    <label for="alamat" class="d-flex align-items-center">
+                                        <span>Masukkan alamat</span>
+                                    </label>
                                     @error('alamat')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="data_ktp">Data KTP</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="data_ktp">Data KTP</p>
                                     <select name="data_ktp" class="input" required id="data_ktp">
                                         <option value="">Pilih kelengkapan ktp</option>
                                         <option value="benar" {{ $sopir->data_ktp == 'benar' ? 'selected' : '' }}>
@@ -136,9 +148,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="data_sim">Data SIM</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="data_sim">Data SIM</p>
                                     <select name="data_sim" class="input" required id="data_sim">
                                         <option value="">Pilih kelengkapan sim</option>
                                         <option value="benar" {{ $sopir->data_sim == 'benar' ? 'selected' : '' }}>
@@ -153,9 +165,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="data_nomor_telepon">Data Nomor Telepon</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="data_nomor_telepon">Data Nomor Telepon</p>
                                     <select name="data_nomor_telepon" class="input" id="data_nomor_telepon" required>
                                         <option value="benar"
                                             {{ $sopir->data_nomor_telepon == 'benar' ? 'selected' : '' }}>
@@ -171,9 +183,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 row-button">
-                                <div class="input-wrapper">
-                                    <label for="status">Status</label>
+                            <div class="col-md-6 mb-4">
+                                <div class="input-group">
+                                    <p for="status">Status</p>
                                     <select name="status" class="input" id="status" required>
                                         <option value="ada" {{ $sopir->status == 'ada' ? 'selected' : '' }}>
                                             Aktif</option>
