@@ -26,7 +26,7 @@
                     enctype="multipart/form-data">
                     @csrf
                     <div class="row">
-                        <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ asset('assets/img/default/image-notfound.svg') }}"
@@ -43,7 +43,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ asset('assets/img/default/image-notfound.svg') }}"
@@ -61,69 +61,63 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nama">Nama</label>
-                                    <input type="text" id="nama" class="input" required autocomplete="off"
-                                        name="nama" value="{{ old('nama') }}">
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p>Nama Pengguna</p>
+                                        <input type="text" id="nama" autocomplete="off" value="{{ old('nama') }}" name="nama" placeholder="Masukkan nama pengguna">
                                     @error('nama')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nik">NIK</label>
-                                    <input type="number" id="nik" class="input" required autocomplete="off"
-                                        name="nik" value="{{ old('nik') }}">
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p>NIK</p>
+                                    <input type="text" id="nik" autocomplete="off" value="{{ old('nik') }}" name="nik" placeholder="Masukkan nik">
                                     @error('nik')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nomor_telepon">Nomor Telepon</label>
-                                    <input type="number" id="nomor_telepon" class="input" autocomplete="off"
-                                        name="nomor_telepon" value="{{ old('nomor_telepon') }}">
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p>Nomor Telepon</p>
+                                    <input type="text" id="nomor_telepon" autocomplete="off" value="{{ old('nomor_telepon') }}" name="nomor_telepon" placeholder="Masukkan nomor telepon">
                                     @error('nomor_telepon')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nomor_ktp">Nomor KTP</label>
-                                    <input type="number" id="nomor_ktp" class="input" autocomplete="off" name="nomor_ktp"
-                                        value="{{ old('nomor_ktp') }}">
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p>Nomor KTP</p>
+                                    <input type="text" id="nomor_ktp" autocomplete="off" value="{{ old('nomor_ktp') }}" name="nomor_ktp" placeholder="Masukkan nomor ktp">
                                     @error('nomor_ktp')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="nomor_sim">Nomor SIM</label>
-                                    <input type="number" id="nomor_sim" class="input" autocomplete="off" name="nomor_sim"
-                                        value="{{ old('nomor_sim') }}">
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p>Nomor SIM</p>
+                                    <input type="text" id="nomor_sim" autocomplete="off" value="{{ old('nomor_sim') }}" name="nomor_sim" placeholder="Masukkan nomor sim">
                                     @error('nomor_sim')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="alamat">Alamat</label>
-                                    <input type="text" id="alamat" class="input" required autocomplete="off"
-                                        name="alamat" value="{{ old('alamat') }}">
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p>Alamat</p>
+                                    <input type="text" id="alamat" autocomplete="off" value="{{ old('alamat') }}" name="alamat" placeholder="Masukkan alamat">
                                     @error('alamat')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="data_ktp">Data KTP</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="data_ktp">Data KTP</p>
                                     <select name="data_ktp" class="input" required id="data_ktp">
                                         <option value="">Pilih kelengkapan ktp</option>
                                         <option value="benar" {{ old('data_ktp') == 'benar' ? 'selected' : '' }}>Sudah
@@ -136,9 +130,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-4">
-                                <div class="input-wrapper">
-                                    <label for="data_sim">Data SIM</label>
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <p for="data_sim">Data SIM</p>
                                     <select name="data_sim" class="input" required id="data_sim">
                                         <option value="">Pilih kelengkapan sim</option>
                                         <option value="benar" {{ old('data_sim') == 'benar' ? 'selected' : '' }}>Sudah
@@ -151,9 +145,9 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-md-6 row-button">
-                                <div class="input-wrapper">
-                                    <label for="data_nomor_telepon">Data Nomor Telepon</label>
+                            <div class="col-md-6 mb-4">
+                                <div class="input-group">
+                                    <p for="data_nomor_telepon">Data Nomor Telepon</p>
                                     <select name="data_nomor_telepon" class="input" id="data_nomor_telepon" required>
                                         <option value="">Pilih kelengkapan nomor telepon</option>
                                         <option value="benar"

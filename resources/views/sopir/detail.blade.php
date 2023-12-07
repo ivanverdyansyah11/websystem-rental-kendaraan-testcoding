@@ -45,90 +45,60 @@
                                 <div class="input-group">
                                     <p>Nama Pengguna</p>
                                     <input type="text" id="nama" autocomplete="off" disabled value="{{ $sopir->nama }}">
-                                    <label for="nama" class="d-flex align-items-center">
-                                        <span>Masukkan nama pengguna</span>
-                                    </label>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="input-group">
                                     <p>NIK</p>
                                     <input type="text" id="nik" autocomplete="off" disabled value="{{ $sopir->nik }}">
-                                    <label for="nik" class="d-flex align-items-center">
-                                        <span>Masukkan nik</span>
-                                    </label>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="input-group">
                                     <p>Nomor Telepon</p>
-                                    <input type="text" id="nomor_telepon" autocomplete="off" disabled value="{{ $sopir->nomor_telepon }}">
-                                    <label for="nomor_telepon" class="d-flex align-items-center">
-                                        <span>Masukkan nomor telepon</span>
-                                    </label>
+                                    <input type="text" id="nomor_telepon" autocomplete="off" disabled value="{{ $sopir->nomor_telepon ? $sopir->nomor_telepon : '-' }}">
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="input-group">
                                     <p>Nomor KTP</p>
-                                    <input type="text" id="nomor_ktp" autocomplete="off" disabled value="{{ $sopir->nomor_ktp }}">
-                                    <label for="nomor_ktp" class="d-flex align-items-center">
-                                        <span>Masukkan nomor ktp</span>
-                                    </label>
+                                    <input type="text" id="nomor_ktp" autocomplete="off" disabled value="{{ $sopir->nomor_ktp ? $sopir->nomor_ktp : '-' }}">
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="input-group">
                                     <p>Nomor SIM</p>
-                                    <input type="text" id="nomor_sim" autocomplete="off" disabled value="{{ $sopir->nomor_sim }}">
-                                    <label for="nomor_sim" class="d-flex align-items-center">
-                                        <span>Masukkan nomor sim</span>
-                                    </label>
+                                    <input type="text" id="nomor_sim" autocomplete="off" disabled value="{{ $sopir->nomor_sim ? $sopir->nomor_sim : '-' }}">
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="input-group">
                                     <p>Alamat</p>
                                     <input type="text" id="alamat" autocomplete="off" disabled value="{{ $sopir->alamat }}">
-                                    <label for="alamat" class="d-flex align-items-center">
-                                        <span>Masukkan alamat</span>
-                                    </label>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="input-group">
                                     <p>Data KTP</p>
                                     <input type="text" id="data_ktp" autocomplete="off" disabled value="{{ $sopir->data_ktp }}">
-                                    <label for="data_ktp" class="d-flex align-items-center">
-                                        <span>Masukkan data ktp</span>
-                                    </label>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="input-group">
                                     <p>Data SIM</p>
                                     <input type="text" id="data_sim" autocomplete="off" disabled value="{{ $sopir->data_sim }}">
-                                    <label for="data_sim" class="d-flex align-items-center">
-                                        <span>Masukkan data sim</span>
-                                    </label>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="input-group">
                                     <p>Data Nomor Telepon</p>
                                     <input type="text" id="data_nomor_telepon" autocomplete="off" disabled value="{{ $sopir->data_nomor_telepon }}">
-                                    <label for="data_nomor_telepon" class="d-flex align-items-center">
-                                        <span>Masukkan data nomor telepon</span>
-                                    </label>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <div class="input-group">
                                     <p>Status</p>
                                     <input type="text" id="status" autocomplete="off" disabled value="{{ $sopir->status }}">
-                                    <label for="status" class="d-flex align-items-center">
-                                        <span>Masukkan status</span>
-                                    </label>
                                 </div>
                             </div>
                             <div class="col-12">

@@ -65,9 +65,6 @@
                                 <div class="input-group">
                                     <p>Nama Pengguna</p>
                                     <input type="text" id="nama" autocomplete="off" value="{{ $sopir->nama }}" name="nama">
-                                    <label for="nama" class="d-flex align-items-center">
-                                        <span>Masukkan nama pengguna</span>
-                                    </label>
                                     @error('nama')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
@@ -77,9 +74,6 @@
                                 <div class="input-group">
                                     <p>NIK</p>
                                     <input type="text" id="nik" autocomplete="off" value="{{ $sopir->nik }}" name="nik">
-                                    <label for="nik" class="d-flex align-items-center">
-                                        <span>Masukkan nik</span>
-                                    </label>
                                     @error('nik')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
@@ -89,9 +83,6 @@
                                 <div class="input-group">
                                     <p>Nomor Telepon</p>
                                     <input type="text" id="nomor_telepon" autocomplete="off" value="{{ $sopir->nomor_telepon }}" name="nomor_telepon">
-                                    <label for="nomor_telepon" class="d-flex align-items-center">
-                                        <span>Masukkan nomor telepon</span>
-                                    </label>
                                     @error('nomor_telepon')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
@@ -101,9 +92,6 @@
                                 <div class="input-group">
                                     <p>Nomor KTP</p>
                                     <input type="text" id="nomor_ktp" autocomplete="off" value="{{ $sopir->nomor_ktp }}" name="nomor_ktp">
-                                    <label for="nomor_ktp" class="d-flex align-items-center">
-                                        <span>Masukkan nomor ktp</span>
-                                    </label>
                                     @error('nomor_ktp')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
@@ -113,9 +101,6 @@
                                 <div class="input-group">
                                     <p>Nomor SIM</p>
                                     <input type="text" id="nomor_sim" autocomplete="off" value="{{ $sopir->nomor_sim }}" name="nomor_sim">
-                                    <label for="nomor_sim" class="d-flex align-items-center">
-                                        <span>Masukkan nomor sim</span>
-                                    </label>
                                     @error('nomor_sim')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
@@ -125,9 +110,6 @@
                                 <div class="input-group">
                                     <p>Alamat</p>
                                     <input type="text" id="alamat" autocomplete="off" value="{{ $sopir->alamat }}" name="alamat">
-                                    <label for="alamat" class="d-flex align-items-center">
-                                        <span>Masukkan alamat</span>
-                                    </label>
                                     @error('alamat')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
