@@ -15,16 +15,16 @@
                 <tr>
                     <td style="width: 300px;">
                         <img src="{{ public_path('assets/img/brand/brand-text.png') }}"
-                            alt="Brand Nusa Kendala Logo Teks" width="220" style="margin-bottom: 22px;">
+                            alt="Brand Indo Rental Logo Teks" width="220" style="margin-bottom: 22px;">
                     </td>
                     <td style="width: 300px;">
                         <span style="font-weight: bold; line-height: 150%">
-                            PT. NUSA KENDALA
+                            PT. INDO RENTAL
                             <br>
-                            NUSA KENDALA TRANSPORT
+                            INDO RENTAL TRANSPORT
                         </span>
                         <span style="line-height: 150%">
-                            pt.nusakendala@gmail.com
+                            pt.indorental@gmail.com
                             <br>
                             HP: 08123456789
                         </span>
@@ -37,13 +37,13 @@
 
         <table style="margin-top: 62px">
             <tbody>
-                <tr>
+                {{-- <tr>
                     <td style="padding: 3px; width: 300px;">Nama Sopir</td>
                     <td style="padding: 3px; width: 10px;">:</td>
                     <td style="padding: 3px; width: 300px; text-align: end;">
                         {{ $pemesanan->pembayaran_pemesanan->sopir ? $pemesanan->pembayaran_pemesanan->sopir->nama : '-' }}
                     </td>
-                </tr>
+                </tr> --}}
                 <tr>
                     <td style="padding: 3px; width: 300px;">Unit</td>
                     <td style="padding: 3px; width: 10px;">:</td>
@@ -88,18 +88,12 @@
                 <tr>
                     <td style="width: 300px; text-align: center;">
                         {{ $pemesanan->pemesanan->pelanggan ? $pemesanan->pemesanan->pelanggan->nama : '-' }}</td>
-                    <td style="width: 300px; text-align: center;">
-                        {{ $laporan->pengguna->nama_lengkap }}</td>
                 </tr>
                 <tr>
                     <td style="width: 300px; text-align: center;">Penyewa</td>
-                    <td style="width: 300px; text-align: center; text-transform: capitalize;">
-                        {{ $laporan->pengguna->role }}</td>
                 </tr>
                 <tr>
                     <td style="width: 300px; text-align: center; padding-top: 62px;">(..............)</td>
-                    <td style="width: 300px; text-align: center; padding-top: 62px;">
-                        ({{ $laporan->pengguna->nama_lengkap }})</td>
                 </tr>
             </tbody>
         </table>
