@@ -64,7 +64,7 @@
                             <div class="col-md-6 mb-3">
                                 <div class="input-group">
                                     <p>Nama Pengguna</p>
-                                        <input type="text" id="nama" autocomplete="off" value="{{ old('nama') }}" name="nama" placeholder="Masukkan nama pengguna">
+                                    <input type="text" id="nama" autocomplete="off" value="{{ old('nama') }}" name="nama" placeholder="Masukkan nama pengguna">
                                     @error('nama')
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror

@@ -551,7 +551,7 @@ body {
 }
 
 .modal .modal-content .title {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     font-size: 1.625rem;
     font-family: var(--urbanist-semibold);
 }
@@ -681,11 +681,13 @@ form .input-group input:not(:placeholder-shown) ~ label > span {
     display: none;
 }
 
-.content form .input-group > input {
+.content form .input-group > input,
+.modal form .input-group > input {
     padding: 16px;
 }
 
-.content form .input-group > p {
+.content form .input-group > p,
+.modal form .input-group > p {
     font-size: 0.913rem;
     margin-bottom: 6px;
     color: rgba(var(--dark-color), 1);
