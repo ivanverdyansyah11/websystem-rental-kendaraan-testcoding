@@ -35,7 +35,7 @@
             <div class="col-12">
                 <form class="form d-inline-block w-100">
                     <div class="row">
-                        <div class="col-md-6 mb-5">
+                        <div class="col-md-6 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ asset('assets/img/kendaraan-images/' . $kendaraan->foto_kendaraan) }}"
@@ -45,23 +45,23 @@
                         </div>
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="stnk_nama">STNK Atas Nama</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="stnk_nama">STNK Atas Nama</p>
                                         <input type="text" id="stnk_nama" class="input" autocomplete="off" disabled
                                             value="{{ $kendaraan->stnk_nama }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="nomor_plat">Nomor Plat</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="nomor_plat">Nomor Plat</p>
                                         <input type="text" id="nomor_plat" class="input" autocomplete="off" disabled
                                             value="{{ $kendaraan->nomor_plat }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="jenis">Jenis Kendaraan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="jenis">Jenis Kendaraan</p>
                                         @if ($kendaraan->jenis_kendaraan)
                                             <input type="text" id="jenis" class="input" autocomplete="off"
                                                 value="{{ $kendaraan->jenis_kendaraan->nama }}" disabled>
@@ -71,9 +71,9 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="brand">Brand Kendaraan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="brand">Brand Kendaraan</p>
                                         @if ($kendaraan->brand_kendaraan)
                                             <input type="text" id="brand" class="input" autocomplete="off"
                                                 value="{{ $kendaraan->brand_kendaraan->nama }}" disabled>
@@ -83,9 +83,9 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="seri">Nomor Seri</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="seri">Nomor Seri</p>
                                         @if ($kendaraan->seri_kendaraan)
                                             <input type="text" id="seri" class="input" autocomplete="off"
                                                 value="{{ $kendaraan->seri_kendaraan->nomor_seri }}" disabled>
@@ -95,9 +95,9 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="kilometer">Kategori Kilometer</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="kilometer">Kategori Kilometer</p>
                                         @if ($kendaraan->kilometer_kendaraan)
                                             <input type="text" id="kilometer" class="input" autocomplete="off"
                                                 value="{{ $kendaraan->kilometer_kendaraan->jumlah }}" disabled>
@@ -107,72 +107,72 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="kilometer">Kilometer</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="kilometer">Kilometer</p>
                                         <input type="text" id="kilometer" class="input" autocomplete="off" disabled
                                             value="{{ $kendaraan->kilometer_saat_ini }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tarif_sewa_hari">Tarif Sewa Harian</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tarif_sewa_hari">Tarif Sewa Harian</p>
                                         <input type="text" id="tarif_sewa_hari" class="input" autocomplete="off"
                                             disabled value="{{ $kendaraan->tarif_sewa_hari }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tarif_sewa_minggu">Tarif Sewa Mingguan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tarif_sewa_minggu">Tarif Sewa Mingguan</p>
                                         <input type="text" id="tarif_sewa_minggu" class="input" autocomplete="off"
                                             disabled value="{{ $kendaraan->tarif_sewa_minggu }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tarif_sewa_bulan">Tarif Sewa Bulanan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tarif_sewa_bulan">Tarif Sewa Bulanan</p>
                                         <input type="text" id="tarif_sewa_bulan" class="input" autocomplete="off"
                                             disabled value="{{ $kendaraan->tarif_sewa_bulan }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tahun_pembuatan">Tahun Pembuatan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tahun_pembuatan">Tahun Pembuatan</p>
                                         <input type="text" id="tahun_pembuatan" class="input" autocomplete="off"
                                             disabled value="{{ $kendaraan->tahun_pembuatan }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tanggal_pembelian">Tanggal Pembelian</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tanggal_pembelian">Tanggal Pembelian</p>
                                         <input type="text" id="tanggal_pembelian" class="input" autocomplete="off"
                                             disabled value="{{ $kendaraan->tanggal_pembelian }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="warna">Warna</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="warna">Warna</p>
                                         <input type="text" id="warna" class="input" autocomplete="off" disabled
                                             value="{{ $kendaraan->warna }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="nomor_rangka">Nomor Rangka</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="nomor_rangka">Nomor Rangka</p>
                                         <input type="text" id="nomor_rangka" class="input" autocomplete="off"
                                             disabled value="{{ $kendaraan->nomor_rangka }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="nomor_mesin">Nomor Mesin</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="nomor_mesin">Nomor Mesin</p>
                                         <input type="text" id="nomor_mesin" class="input" autocomplete="off"
                                             disabled value="{{ $kendaraan->nomor_mesin }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 row-button">
-                                    <div class="input-wrapper">
-                                        <label for="status">Status</label>
+                                <div class="col-md-6 mb-4">
+                                    <div class="input-group">
+                                        <p for="status">Status</p>
                                         <input type="text" id="status" class="input text-capitalize"
                                             autocomplete="off" disabled value="{{ $kendaraan->status }}">
                                     </div>

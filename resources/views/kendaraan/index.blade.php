@@ -32,14 +32,14 @@
                     </div>
                     <div class="wrapper d-flex align-items-center gap-2">
                         <div class="wrapper position-relative" style="width: max-content;">
-                            <button type="button"
+                            {{-- <button type="button"
                                 class="button-other position-relative button-primary-blur d-flex align-items-center">
                                 <img src="{{ asset('assets/img/button/filter.svg') }}" alt="Icon Filter"
                                     class="img-fluid button-icon">
                                 Filter Kategori
                                 <img src="{{ asset('assets/img/button/arrow-down-primary.svg') }}" alt="Icon Filter"
                                     class="img-fluid button-icon" style="margin-left: 6px;">
-                            </button>
+                            </button> --}}
                             <div class="modal-other modal-big d-flex flex-column gap-3">
                                 <div class="input-wrapper w-100">
                                     <select id="jenis_kendaraan" class="input" name="jenis_kendaraans_id">

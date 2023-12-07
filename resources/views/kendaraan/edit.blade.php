@@ -26,7 +26,7 @@
                     action="{{ route('kendaraan.update', $kendaraan->id) }}" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
-                        <div class="col-md-6 mb-5">
+                        <div class="col-md-6 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ asset('assets/img/kendaraan-images/' . $kendaraan->foto_kendaraan) }}"
@@ -45,23 +45,23 @@
                         </div>
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="stnk_nama">STNK Atas Nama</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="stnk_nama">STNK Atas Nama</p>
                                         <input type="text" required id="stnk_nama" class="input" autocomplete="off"
                                             value="{{ $kendaraan->stnk_nama }}" name="stnk_nama">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="nomor_plat">Nomor Plat</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="nomor_plat">Nomor Plat</p>
                                         <input type="text" required id="nomor_plat" class="input" autocomplete="off"
                                             value="{{ $kendaraan->nomor_plat }}" name="nomor_plat">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="jenis_kendaraan">Jenis Kendaraan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="jenis_kendaraan">Jenis Kendaraan</p>
                                         <select id="jenis_kendaraan" class="input">
                                             @if ($kendaraan->jenis_kendaraan)
                                                 @foreach ($jenises as $jenis)
@@ -79,9 +79,9 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="brand_kendaraan">Brand Kendaraan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="brand_kendaraan">Brand Kendaraan</p>
                                         <select id="brand_kendaraan" class="input">
                                             @if ($kendaraan->brand_kendaraan)
                                                 @foreach ($brands as $brand)
@@ -99,9 +99,9 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="seri_kendaraans_id">Nomor Seri</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="seri_kendaraans_id">Nomor Seri</p>
                                         <select required id="seri_kendaraans_id" class="input" name="seri_kendaraans_id">
                                             @if ($kendaraan->seri_kendaraan)
                                                 @foreach ($series as $seri)
@@ -124,9 +124,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="kilometerData">Kategori Kilometer</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="kilometerData">Kategori Kilometer</p>
                                         <select required id="kilometerData" class="input"
                                             name="kategori_kilometer_kendaraans_id">
                                             @if ($kendaraan->kilometer_kendaraan)
@@ -150,9 +150,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="kilometer">Kilometer</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="kilometer">Kilometer</p>
                                         <input type="number" required id="kilometer" class="input" autocomplete="off"
                                             value="{{ $kendaraan->kilometer_saat_ini }}" name="kilometer">
                                         @error('kilometer')
@@ -160,9 +160,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tarif_sewa_hari">Tarif Sewa Harian</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tarif_sewa_hari">Tarif Sewa Harian</p>
                                         <input type="number" required id="tarif_sewa_hari" class="input"
                                             autocomplete="off" value="{{ $kendaraan->tarif_sewa_hari }}"
                                             name="tarif_sewa_hari">
@@ -171,9 +171,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tarif_sewa_minggu">Tarif Sewa Mingguan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tarif_sewa_minggu">Tarif Sewa Mingguan</p>
                                         <input type="number" required id="tarif_sewa_minggu" class="input"
                                             autocomplete="off" value="{{ $kendaraan->tarif_sewa_minggu }}"
                                             name="tarif_sewa_minggu">
@@ -182,9 +182,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tarif_sewa_bulan">Tarif Sewa Bulanan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tarif_sewa_bulan">Tarif Sewa Bulanan</p>
                                         <input type="number" required id="tarif_sewa_bulan" class="input"
                                             autocomplete="off" value="{{ $kendaraan->tarif_sewa_bulan }}"
                                             name="tarif_sewa_bulan">
@@ -193,9 +193,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tahun_pembuatan">Tahun Pembuatan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tahun_pembuatan">Tahun Pembuatan</p>
                                         <input type="text" required id="tahun_pembuatan" class="input"
                                             autocomplete="off" value="{{ $kendaraan->tahun_pembuatan }}"
                                             name="tahun_pembuatan" minlength="0" maxlength="4" pattern="[0-9]*"
@@ -205,9 +205,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tanggal_pembelian">Tanggal Pembelian</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tanggal_pembelian">Tanggal Pembelian</p>
                                         <input type="date" required id="tanggal_pembelian" class="input"
                                             autocomplete="off" value="{{ $kendaraan->tanggal_pembelian }}"
                                             name="tanggal_pembelian">
@@ -216,9 +216,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="warna">Warna</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="warna">Warna</p>
                                         <input type="text" required id="warna" class="input" autocomplete="off"
                                             value="{{ $kendaraan->warna }}" name="warna">
                                         @error('warna')
@@ -226,9 +226,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="nomor_rangka">Nomor Rangka</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="nomor_rangka">Nomor Rangka</p>
                                         <input type="text" required id="nomor_rangka" class="input"
                                             autocomplete="off" value="{{ $kendaraan->nomor_rangka }}"
                                             name="nomor_rangka">
@@ -237,9 +237,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="nomor_mesin">Nomor Mesin</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="nomor_mesin">Nomor Mesin</p>
                                         <input type="text" required id="nomor_mesin" class="input"
                                             autocomplete="off" value="{{ $kendaraan->nomor_mesin }}" name="nomor_mesin">
                                         @error('nomor_mesin')
@@ -247,9 +247,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 row-button">
-                                    <div class="input-wrapper">
-                                        <label for="status">Status</label>
+                                <div class="col-md-6 mb-4">
+                                    <div class="input-group">
+                                        <p for="status">Status</p>
                                         <select required id="status" class="input text-capitalize" name="status">
                                             <option value="ready" {{ $kendaraan->status == 'ready' ? 'selected' : '' }}>
                                                 ready</option>

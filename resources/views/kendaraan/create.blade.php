@@ -26,7 +26,7 @@
                     enctype="multipart/form-data">
                     @csrf
                     <div class="row">
-                        <div class="col-md-6 mb-5">
+                        <div class="col-md-6 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ asset('assets/img/default/image-notfound.svg') }}"
@@ -45,9 +45,9 @@
                         </div>
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="stnk_nama">STNK Atas Nama</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="stnk_nama">STNK Atas Nama</p>
                                         <input type="text" required id="stnk_nama" class="input" autocomplete="off"
                                             name="stnk_nama" value="{{ old('stnk_nama') }}">
                                         @error('stnk_nama')
@@ -55,9 +55,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="nomor_plat">Nomor Plat</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="nomor_plat">Nomor Plat</p>
                                         <input type="text" required id="nomor_plat" class="input" autocomplete="off"
                                             name="nomor_plat" value="{{ old('nomor_plat') }}">
                                         @error('nomor_plat')
@@ -65,9 +65,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="jenis_kendaraan">Jenis Kendaraan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="jenis_kendaraan">Jenis Kendaraan</p>
                                         <select id="jenis_kendaraan" class="input">
                                             <option value="0">Pilih jenis kendaraan</option>
                                             @foreach ($jenises as $jenis)
@@ -76,9 +76,9 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="brand_kendaraan">Brand Kendaraan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="brand_kendaraan">Brand Kendaraan</p>
                                         <select id="brand_kendaraan" class="input">
                                             <option value="0">Pilih brand kendaraan</option>
                                             @foreach ($brands as $brand)
@@ -87,9 +87,9 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="seri_kendaraans_id">Nomor Seri</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="seri_kendaraans_id">Nomor Seri</p>
                                         <select required id="seri_kendaraans_id" class="input" name="seri_kendaraans_id"
                                             data-target="#seri_kendaraans_id">
                                             <option value="">Pilih nomor seri kendaraan</option>
@@ -104,9 +104,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="kilometerData">Kategori Kilometer</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="kilometerData">Kategori Kilometer</p>
                                         <select class="input" name="kategori_kilometer_kendaraans_id" required
                                             id="kilometerData">
                                             <option value="">Pilih kategori kilometer kendaraan</option>
@@ -121,9 +121,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="kilometer">Kilometer</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="kilometer">Kilometer Saat Ini</p>
                                         <input type="number" required id="kilometer" class="input" autocomplete="off"
                                             name="kilometer" value="{{ old('kilometer') }}">
                                         @error('kilometer')
@@ -131,9 +131,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tarif_sewa_hari">Tarif Sewa Harian</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tarif_sewa_hari">Tarif Sewa Harian</p>
                                         <input type="number" required id="tarif_sewa_hari" class="input"
                                             autocomplete="off" name="tarif_sewa_hari"
                                             value="{{ old('tarif_sewa_hari') }}">
@@ -142,9 +142,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tarif_sewa_minggu">Tarif Sewa Mingguan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tarif_sewa_minggu">Tarif Sewa Mingguan</p>
                                         <input type="number" required id="tarif_sewa_minggu" class="input"
                                             autocomplete="off" name="tarif_sewa_minggu"
                                             value="{{ old('tarif_sewa_minggu') }}">
@@ -153,9 +153,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tarif_sewa_bulan">Tarif Sewa Bulanan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tarif_sewa_bulan">Tarif Sewa Bulanan</p>
                                         <input type="number" required id="tarif_sewa_bulan" class="input"
                                             autocomplete="off" name="tarif_sewa_bulan"
                                             value="{{ old('tarif_sewa_bulan') }}">
@@ -164,9 +164,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tahun_pembuatan">Tahun Pembuatan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tahun_pembuatan">Tahun Pembuatan</p>
                                         <input type="text" required id="tahun_pembuatan" class="input"
                                             autocomplete="off" name="tahun_pembuatan"
                                             value="{{ old('tahun_pembuatan') }}" minlength="0" maxlength="4"
@@ -176,9 +176,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tanggal_pembelian">Tanggal Pembelian</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tanggal_pembelian">Tanggal Pembelian</p>
                                         <input type="date" required id="tanggal_pembelian" class="input"
                                             autocomplete="off" name="tanggal_pembelian"
                                             value="{{ old('tanggal_pembelian') }}">
@@ -187,9 +187,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="warna">Warna</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="warna">Warna</p>
                                         <input type="text" required id="warna" class="input" autocomplete="off"
                                             name="warna" value="{{ old('warna') }}">
                                         @error('warna')
@@ -197,9 +197,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="nomor_rangka">Nomor Rangka</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="nomor_rangka">Nomor Rangka</p>
                                         <input type="text" required id="nomor_rangka" class="input"
                                             autocomplete="off" name="nomor_rangka" value="{{ old('nomor_rangka') }}">
                                         @error('nomor_rangka')
@@ -207,9 +207,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6 row-button">
-                                    <div class="input-wrapper">
-                                        <label for="nomor_mesin">Nomor Mesin</label>
+                                <div class="col-md-6 mb-4">
+                                    <div class="input-group">
+                                        <p for="nomor_mesin">Nomor Mesin</p>
                                         <input type="text" required id="nomor_mesin" class="input"
                                             autocomplete="off" name="nomor_mesin" value="{{ old('nomor_mesin') }}">
                                         @error('nomor_mesin')
