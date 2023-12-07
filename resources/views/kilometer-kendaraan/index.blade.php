@@ -94,9 +94,9 @@
                 <form class="form d-inline-block w-100" method="POST" action="{{ route('kilometerKendaraan.store') }}">
                     @csrf
                     <div class="row">
-                        <div class="col-12 row-button">
-                            <div class="input-wrapper">
-                                <label for="nama">Kategori Kilometer</label>
+                        <div class="col-12 mb-4">
+                            <div class="input-group">
+                                <p for="nama">Kategori Kilometer</p>
                                 <input type="number" id="nama" class="input" required autocomplete="off"
                                     name="jumlah" value="{{ old('jumlah') }}">
                                 @error('jumlah')
@@ -126,9 +126,9 @@
                 <h3 class="title">Detail Kategori Kilometer</h3>
                 <form class="form d-inline-block w-100">
                     <div class="row">
-                        <div class="col-12 row-button">
-                            <div class="input-wrapper">
-                                <label for="nama">Kategori Kilometer</label>
+                        <div class="col-12 mb-4">
+                            <div class="input-group">
+                                <p for="nama">Kategori Kilometer</p>
                                 <input type="number" id="nama" class="input" autocomplete="off" disabled
                                     data-value="jumlah">
                             </div>
@@ -153,9 +153,9 @@
                     @csrf
                     @csrf
                     <div class="row">
-                        <div class="col-12 row-button">
-                            <div class="input-wrapper">
-                                <label for="nama">Kategori Kilometer</label>
+                        <div class="col-12 mb-4">
+                            <div class="input-group">
+                                <p for="nama">Kategori Kilometer</p>
                                 <input type="number" id="nama" class="input" required autocomplete="off"
                                     data-value="jumlah" name="jumlah">
                                 @error('jumlah')
@@ -193,7 +193,7 @@
                         dari sistem.
                     </p>
                     <div class="button-wrapper d-flex">
-                        <button type="submit" class="button-primary">Hapus Kategori</button>
+                        <button type="submit" class="button-primary">Hapus Kategori Kilometer</button>
                         <button type="button" class="button-reverse" data-bs-dismiss="modal">Batal Hapus</button>
                     </div>
                 </form>
