@@ -432,23 +432,24 @@ body {
 }
 
 .topbar .user-role {
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: rgba(var(--dark-color), 1);
     text-transform: capitalize;
+    font-family: var(--urbanist-semibold);
 }
 
 .topbar .popup-topbar {
     display: inline-block;
-    bottom: -106px;
+    bottom: -62px;
     right: 0;
-    width: 76%;
+    width: 100%;
     height: fit-content;
     z-index: -9999;
     opacity: 0;
 }
 
 .topbar .popup-topbar.active {
-    bottom: -126px;
+    bottom: -82px;
     z-index: 10;
     opacity: 1;
 }

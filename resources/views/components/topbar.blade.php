@@ -16,13 +16,13 @@
         </div>
         <div class="popup-topbar position-absolute d-flex flex-column">
             <div class="modal-topbar">
-                <a href="{{ route('pengguna') }}"
+                {{-- <a href="{{ route('pengguna') }}"
                     class="wrapper d-flex align-items-center mb-2 {{ Request::is('pengguna*') ? 'active' : '' }}">
                     <div class="wrapper-topbar">
                         <div class="pengguna-topbar"></div>
                     </div>
                     <p>Pengguna</p>
-                </a>
+                </a> --}}
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button type="submit" class="wrapper d-flex align-items-center">
