@@ -26,7 +26,7 @@
                     method="POST">
                     @csrf
                     <div class="row">
-                        <div class="col-md-6 mb-5">
+                        <div class="col-md-6 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ $pemesanan->kendaraan ? asset('assets/img/kendaraan-images/' . $pemesanan->kendaraan->foto_kendaraan) : asset('assets/img/default/image-notfound.svg') }}"
@@ -36,9 +36,9 @@
                         </div>
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="nomor_plat">Nomor Plat</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="nomor_plat">Nomor Plat</p>
                                         @if ($pemesanan->kendaraan)
                                             <input type="text" id="nomor_plat" class="input" autocomplete="off" disabled
                                                 value="{{ $pemesanan->kendaraan->nomor_plat }}">
@@ -48,9 +48,9 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="tarifSewa">Tarif Sewa</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="tarifSewa">Tarif Sewa</p>
                                         @if ($pemesanan->kendaraan)
                                             <input type="text" id="tarifSewa" class="input" autocomplete="off" disabled
                                                 value="{{ $pemesanan->kendaraan->tarif_sewa_hari }}">
@@ -60,9 +60,9 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="jumlah_hari">Jumlah Hari</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="jumlah_hari">Jumlah Hari</p>
                                         <select name="jumlah_hari" id="jumlah_hari" class="input" required>
                                             <option value="">Pilih jumlah hari</option>
                                             <option value="1">1</option>
@@ -73,9 +73,9 @@
                                         <p class="caption-error mt-2">{{ $message }}</p>
                                     @enderror
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="total_biaya">Total Biaya</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="total_biaya">Total Biaya</p>
                                         <input type="number" id="total_biaya" class="input" autocomplete="off"
                                             name="total_biaya" value="{{ old('total_biaya') }}" required>
                                         @error('total_biaya')
@@ -83,9 +83,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-12 row-button">
-                                    <div class="input-wrapper">
-                                        <label for="keterangan">Keterangan</label>
+                                <div class="col-12 mb-4">
+                                    <div class="input-group">
+                                        <p for="keterangan">Keterangan</p>
                                         <input type="text" id="keterangan" class="input" autocomplete="off"
                                             name="keterangan" value="{{ old('keterangan') }}">
                                         @error('keterangan')
@@ -109,6 +109,10 @@
     </div>
 
     <script>
+        $("#jumlah_hari").select2({
+            theme: "bootstrap-5",
+        });
+
         const jumlahHari = document.querySelector('#jumlah_hari');
         const tarifSewa = document.querySelector('#tarifSewa');
         const totalBiaya = document.querySelector('#total_biaya');
