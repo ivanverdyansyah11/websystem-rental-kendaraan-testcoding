@@ -93,11 +93,10 @@
                 <form class="form d-inline-block w-100" method="POST" action="{{ route('brandKendaraan.store') }}">
                     @csrf
                     <div class="row">
-                        <div class="col-12 row-button">
-                            <div class="input-wrapper">
-                                <label for="nama">Nama Brand Kendaraan</label>
-                                <input type="text" id="nama" class="input" required autocomplete="off"
-                                    name="nama" value="{{ old('nama') }}">
+                        <div class="col-12 mb-4">
+                            <div class="input-group">
+                                <p>Nama Brand Kendaraan</p>
+                                <input type="text" id="nama" autocomplete="off" value="{{ old('nama') }}" name="nama" placeholder="Masukkan nama brand kendaraan" required>
                                 @error('nama')
                                     <p class="caption-error mt-2">{{ $message }}</p>
                                 @enderror
@@ -124,9 +123,9 @@
                 <h3 class="title">Detail Brand Kendaraan</h3>
                 <form class="form d-inline-block w-100">
                     <div class="row">
-                        <div class="col-12 row-button">
-                            <div class="input-wrapper">
-                                <label for="nama">Nama Brand Kendaraan</label>
+                        <div class="col-12 mb-4">
+                            <div class="input-group">
+                                <p for="nama">Nama Brand Kendaraan</p>
                                 <input type="text" id="nama" class="input" autocomplete="off"
                                     data-value="nama" disabled>
                             </div>
@@ -150,9 +149,9 @@
                 <form id="editBrand" class="form d-inline-block w-100" method="POST">
                     @csrf
                     <div class="row">
-                        <div class="col-12 row-button">
-                            <div class="input-wrapper">
-                                <label for="nama">Nama Brand Kendaraan</label>
+                        <div class="col-12 mb-4">
+                            <div class="input-group">
+                                <p for="nama">Nama Brand Kendaraan</p>
                                 <input type="text" id="nama" class="input" required autocomplete="off"
                                     data-value="nama" name="nama">
                                 @error('nama')
@@ -188,7 +187,7 @@
                         Tindakan ini tidak dapat diurungkan, dan brand kendaraan akan dihapus secara permanen dari sistem.
                     </p>
                     <div class="button-wrapper d-flex">
-                        <button type="submit" class="button-primary">Hapus Brand</button>
+                        <button type="submit" class="button-primary">Hapus Brand Kendaraan</button>
                         <button type="button" class="button-reverse" data-bs-dismiss="modal">Batal Hapus</button>
                     </div>
                 </form>
