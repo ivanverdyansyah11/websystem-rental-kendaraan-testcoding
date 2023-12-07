@@ -31,7 +31,7 @@
                     method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
-                        <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ $pelepasan_pemesanan->foto_dokumen ? asset('assets/img/pemesanan-dokumen-images/' . $pelepasan_pemesanan->foto_dokumen) : asset('assets/img/default/image-notfound.svg') }}"
@@ -48,7 +48,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ $pelepasan_pemesanan->foto_kendaraan ? asset('assets/img/pemesanan-kendaraan-images/' . $pelepasan_pemesanan->foto_kendaraan) : asset('assets/img/default/image-notfound.svg') }}"
@@ -65,7 +65,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ $pelepasan_pemesanan->foto_pelanggan ? asset('assets/img/pemesanan-pelanggan-images/' . $pelepasan_pemesanan->foto_pelanggan) : asset('assets/img/default/image-notfound.svg') }}"
@@ -84,9 +84,9 @@
                         </div>
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="nama_penyewa">Nama Pelanggan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="nama_penyewa">Nama Pelanggan</p>
                                         @if ($pemesanan->pelanggan)
                                             <input type="text" id="nama_penyewa" class="input" autocomplete="off"
                                                 value="{{ $pemesanan->pelanggan->nama }}" readonly>
@@ -96,9 +96,9 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="nomor_plat">Nomor Plat</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="nomor_plat">Nomor Plat</p>
                                         @if ($pemesanan->kendaraan)
                                             <input type="text" id="nomor_plat" class="input" autocomplete="off"
                                                 value="{{ $pemesanan->kendaraan->nomor_plat }}" readonly>
@@ -108,45 +108,45 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="kilometer_keluar">Kilometer Keluar (Km)</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="kilometer_keluar">Kilometer Keluar (Km)</p>
                                         <input type="number" id="kilometer_keluar" class="input" autocomplete="off"
                                             readonly value="{{ $pelepasan_pemesanan->kilometer_keluar }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="bensin_keluar">Bensin Keluar (Liter)</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="bensin_keluar">Bensin Keluar (Liter)</p>
                                         <input type="number" id="bensin_keluar" class="input" autocomplete="off"
                                             readonly value="{{ $pelepasan_pemesanan->bensin_keluar }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="sarung_jok">Sarung Jok</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="sarung_jok">Sarung Jok</p>
                                         <input type="text" id="sarung_jok" class="input text-capitalize"
                                             autocomplete="off" readonly value="{{ $pelepasan_pemesanan->sarung_jok }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="karpet">Karpet</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="karpet">Karpet</p>
                                         <input type="text" id="karpet" class="input text-capitalize"
                                             autocomplete="off" readonly value="{{ $pelepasan_pemesanan->karpet }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="kondisi_kendaraan">Kondisi Kendaraan</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="kondisi_kendaraan">Kondisi Kendaraan</p>
                                         <input type="text" id="kondisi_kendaraan" class="input text-capitalize"
                                             autocomplete="off" readonly
                                             value="{{ $pelepasan_pemesanan->kondisi_kendaraan }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="input-wrapper">
-                                        <label for="ban_serep">Ban Serep</label>
+                                <div class="col-mb-3">
+                                    <div class="input-group">
+                                        <p for="ban_serep">Ban Serep</p>
                                         <input type="text" id="ban_serep" class="input text-capitalize"
                                             autocomplete="off" readonly value="{{ $pelepasan_pemesanan->ban_serep }}">
                                     </div>
@@ -163,7 +163,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-lg-4 col-xl-3 mb-5">
+                        <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ $pelepasan_pemesanan->pembayaran_pemesanan->foto_pembayaran ? asset('assets/img/pembayaran-pemesanan-images/' . $pelepasan_pemesanan->pembayaran_pemesanan->foto_pembayaran) : asset('assets/img/default/image-notfound.svg') }}"
@@ -183,56 +183,56 @@
                         </div>
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="waktu_sewa">Waktu Sewa (Hari)</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="waktu_sewa">Waktu Sewa (Hari)</p>
                                         <input type="number" id="waktu_sewa" class="input" autocomplete="off"
                                             value="{{ $pelepasan_pemesanan->pembayaran_pemesanan->waktu_sewa }}" readonly>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="total_tarif_sewa">Total Tarif Sewa</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="total_tarif_sewa">Total Tarif Sewa</p>
                                         <input type="number" id="total_tarif_sewa" class="input" autocomplete="off"
                                             value="{{ $pelepasan_pemesanan->pembayaran_pemesanan->total_tarif_sewa }}"
                                             readonly>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="total_bayar">Total Bayar</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="total_bayar">Total Bayar</p>
                                         <input type="number" id="total_bayar" class="input" autocomplete="off"
                                             readonly
                                             value="{{ $pelepasan_pemesanan->pembayaran_pemesanan->total_bayar ? $pelepasan_pemesanan->pembayaran_pemesanan->total_bayar : '' }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="total_kembalian">Total Kembalian</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="total_kembalian">Total Kembalian</p>
                                         <input type="number" id="total_kembalian" class="input" autocomplete="off"
                                             value="{{ $pelepasan_pemesanan->pembayaran_pemesanan->total_kembalian }}"
                                             readonly>
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="jenis_pembayaran">Jenis Pembayaran</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="jenis_pembayaran">Jenis Pembayaran</p>
                                         <input type="text" id="jenis_pembayaran" class="input text-capitalize"
                                             autocomplete="off" readonly
                                             value="{{ $pelepasan_pemesanan->pembayaran_pemesanan->jenis_pembayaran }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="metode_bayar">Metode Pembayaran</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="metode_bayar">Metode Pembayaran</p>
                                         <input type="text" id="metode_bayar" class="input text-capitalize"
                                             autocomplete="off" readonly
                                             value="{{ $pelepasan_pemesanan->pembayaran_pemesanan->metode_bayar }}">
                                     </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <div class="input-wrapper">
-                                        <label for="sopirs_id">Penyewaan Sopir</label>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <p for="sopirs_id">Penyewaan Sopir</p>
                                         @if ($pemesanan->sopir)
                                             <input type="text" id="sopirs_id" class="input" autocomplete="off"
                                                 value="{{ $pemesanan->sopir->nama }}" readonly>
@@ -242,9 +242,9 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col-md-6 row-button">
-                                    <div class="input-wrapper">
-                                        <label for="keterangan">Keterangan</label>
+                                <div class="col-md-6 mb-4">
+                                    <div class="input-group">
+                                        <p for="keterangan">Keterangan</p>
                                         <input type="text" id="keterangan" class="input" autocomplete="off" readonly
                                             value="{{ $pelepasan_pemesanan->pembayaran_pemesanan->keterangan }}">
                                     </div>
