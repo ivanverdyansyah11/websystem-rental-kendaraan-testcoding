@@ -25,9 +25,9 @@
                 <form class="form d-inline-block w-100" method="POST" action="{{ route('seriKendaraan.store') }}">
                     @csrf
                     <div class="row">
-                        <div class="col-12 mb-4">
-                            <div class="input-wrapper">
-                                <label for="nomor">Seri Kendaraan</label>
+                        <div class="col-12 mb-3">
+                            <div class="input-group">
+                                <p for="nomor">Seri Kendaraan</p>
                                 <input type="text" id="nomor" class="input" required autocomplete="off"
                                     name="nomor_seri" value="{{ old('nomor_seri') }}">
                                 @error('nomor_seri')
@@ -35,9 +35,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="jenis_kendaraan_add">Jenis Kendaraan</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="jenis_kendaraan_add">Jenis Kendaraan</p>
                                 <select id="jenis_kendaraan_add" class="input" name="jenis_kendaraans_id" required>
                                     <option value="">
                                         Pilih jenis kendaraan</option>
@@ -52,9 +52,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 row-button">
-                            <div class="input-wrapper">
-                                <label for="brand_kendaraan_add">Brand Kendaraan</label>
+                        <div class="col-md-6 mb-4">
+                            <div class="input-group">
+                                <p for="brand_kendaraan_add">Brand Kendaraan</p>
                                 <select id="brand_kendaraan_add" class="input" name="brand_kendaraans_id" required>
                                     <option value="">Pilih brand kendaraan</option>
                                     @foreach ($brands as $brand)

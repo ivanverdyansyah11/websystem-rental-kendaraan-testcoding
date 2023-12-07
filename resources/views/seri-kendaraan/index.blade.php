@@ -116,7 +116,7 @@
                         sistem.
                     </p>
                     <div class="button-wrapper d-flex">
-                        <button type="submit" class="button-primary">Hapus Nomor Seri</button>
+                        <button type="submit" class="button-primary">Hapus Nomor Seri Kendaraan</button>
                         <button type="button" class="button-reverse" data-bs-dismiss="modal">Batal Hapus</button>
                     </div>
                 </form>

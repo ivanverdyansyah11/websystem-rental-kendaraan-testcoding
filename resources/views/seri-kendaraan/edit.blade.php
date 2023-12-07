@@ -26,9 +26,9 @@
                     action="{{ route('seriKendaraan.update', $seri->id) }}">
                     @csrf
                     <div class="row">
-                        <div class="col-12 mb-4">
-                            <div class="input-wrapper">
-                                <label for="nomor">Seri Kendaraan</label>
+                        <div class="col-12 mb-3">
+                            <div class="input-group">
+                                <p for="nomor">Seri Kendaraan</p>
                                 <input type="text" id="nomor" class="input" required autocomplete="off"
                                     name="nomor_seri" value="{{ $seri->nomor_seri }}">
                                 @error('nomor_seri')
@@ -36,9 +36,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="jenis_kendaraan_edit">Jenis Kendaraan</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="jenis_kendaraan_edit">Jenis Kendaraan</p>
                                 <select id="jenis_kendaraan_edit" class="input" name="jenis_kendaraans_id" required>
                                     @if ($seri->jenis_kendaraan)
                                         @foreach ($jenises as $jenis)
@@ -59,9 +59,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 row-button">
-                            <div class="input-wrapper">
-                                <label for="brand_kendaraan_edit">Brand Kendaraan</label>
+                        <div class="col-md-6 mb-4">
+                            <div class="input-group">
+                                <p for="brand_kendaraan_edit">Brand Kendaraan</p>
                                 <select id="brand_kendaraan_edit" class="input" name="brand_kendaraans_id" required>
                                     @if ($seri->brand_kendaraan)
                                         @foreach ($brands as $brand)

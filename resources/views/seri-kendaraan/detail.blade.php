@@ -24,16 +24,16 @@
             <div class="col-12">
                 <form class="form d-inline-block w-100">
                     <div class="row">
-                        <div class="col-12 mb-4">
-                            <div class="input-wrapper">
-                                <label for="nomor">Seri Kendaraan</label>
+                        <div class="col-12 mb-3">
+                            <div class="input-group">
+                                <p for="nomor">Seri Kendaraan</p>
                                 <input type="text" id="nomor" class="input" autocomplete="off"
                                     value="{{ $seri->nomor_seri }}" disabled>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="jenis_kendaraan_add">Jenis Kendaraan</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="jenis_kendaraan_add">Jenis Kendaraan</p>
                                 @if ($seri->jenis_kendaraan)
                                     <input type="text" id="jenis_kendaraan_add" class="input" autocomplete="off"
                                         value="{{ $seri->jenis_kendaraan->nama }}" disabled>
@@ -43,9 +43,9 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="col-md-6 row-button">
-                            <div class="input-wrapper">
-                                <label for="brand_kendaraan_add">Brand Kendaraan</label>
+                        <div class="col-md-6 mb-4">
+                            <div class="input-group">
+                                <p for="brand_kendaraan_add">Brand Kendaraan</p>
                                 @if ($seri->brand_kendaraan)
                                     <input type="text" id="brand_kendaraan_add" class="input" autocomplete="off"
                                         value="{{ $seri->brand_kendaraan->nama }}" disabled>
