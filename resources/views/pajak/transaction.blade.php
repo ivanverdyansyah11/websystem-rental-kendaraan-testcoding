@@ -26,7 +26,7 @@
                     action="{{ route('pajak.transaction.action', $kendaraan->id) }}">
                     @csrf
                     <div class="row">
-                        <div class="col-12 mb-5">
+                        <div class="col-12 mb-4">
                             <div class="input-wrapper">
                                 <div class="wrapper d-flex gap-3 align-items-end">
                                     <img src="{{ asset('assets/img/kendaraan-images/' . $kendaraan->foto_kendaraan) }}"
@@ -34,37 +34,37 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="stnk_nama">STNK Atas Nama</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="stnk_nama">STNK Atas Nama</p>
                                 <input type="text" id="stnk_nama" class="input" autocomplete="off"
                                     value="{{ $kendaraan->stnk_nama }}" disabled>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="nomor_seri">Nomor Seri</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="nomor_seri">Nomor Seri</p>
                                 <input type="text" id="nomor_seri" class="input" autocomplete="off"
                                     value="{{ $kendaraan->seri_kendaraan->nomor_seri }}" disabled>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="jenis">Jenis Kendaraan</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="jenis">Jenis Kendaraan</p>
                                 <input type="text" id="jenis" class="input" autocomplete="off"
                                     value="{{ $kendaraan->jenis_kendaraan->nama }}" disabled>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="brand">Brand Kendaraan</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="brand">Brand Kendaraan</p>
                                 <input type="text" id="brand" class="input" autocomplete="off"
                                     value="{{ $kendaraan->brand_kendaraan->nama }}" disabled>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="jenis_pajak">Jenis Pajak</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="jenis_pajak">Jenis Pajak</p>
                                 <select id="jenis_pajak" class="input" name="jenis_pajak" required>
                                     <option value="">Pilih jenis pajak kendaraan</option>
                                     <option value="samsat" {{ old('jenis_pajak') == 'samsat' ? 'selected' : '' }}>Samsat
@@ -80,9 +80,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="input-wrapper">
-                                <label for="metode_bayar">Metode Pembayaran</label>
+                        <div class="col-md-6 mb-3">
+                            <div class="input-group">
+                                <p for="metode_bayar">Metode Pembayaran</p>
                                 <select id="metode_bayar" class="input" name="metode_bayar" required>
                                     <option value="">Pilih metode pembayaran</option>
                                     <option value="transfer bank"
@@ -115,9 +115,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="input-wrapper">
-                                <label for="tanggal_bayar">Tanggal Bayar</label>
+                        <div class="col-md-4 mb-3">
+                            <div class="input-group">
+                                <p for="tanggal_bayar">Tanggal Bayar</p>
                                 <input type="date" id="tanggal_bayar" class="input" autocomplete="off"
                                     name="tanggal_bayar" value="{{ old('tanggal_bayar') }}" required>
                                 @error('tanggal_bayar')
@@ -125,9 +125,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="input-wrapper">
-                                <label for="jumlah_bayar">Jumlah Bayar</label>
+                        <div class="col-md-4 mb-3">
+                            <div class="input-group">
+                                <p for="jumlah_bayar">Jumlah Bayar</p>
                                 <input type="number" id="jumlah_bayar" class="input" autocomplete="off"
                                     name="jumlah_bayar" value="{{ old('jumlah_bayar') }}" required>
                                 @error('jumlah_bayar')
@@ -135,9 +135,9 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-md-4 row-button">
-                            <div class="input-wrapper">
-                                <label for="finance">Staff Finance</label>
+                        <div class="col-md-4 mb-4">
+                            <div class="input-group">
+                                <p for="finance">Staff Finance</p>
                                 <input type="text" id="finance" class="input" autocomplete="off" name="finance"
                                     value="{{ old('finance') }}" required>
                                 @error('finance')
