@@ -18,7 +18,7 @@ class CreateAuthsTable extends Migration
             $table->string('nama_pengguna');
             $table->string('email');
             $table->string('password');
-            $table->enum('role', ['admin', 'staff', 'customer']);
+            $table->enum('role', ['admin', 'staff']);
             $table->softDeletes();
             $table->timestamps();
         });
