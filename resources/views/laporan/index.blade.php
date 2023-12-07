@@ -18,7 +18,7 @@
         <div class="row mb-4">
             <div class="col-12 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 gap-md-0">
                 <h5 class="subtitle">Data Laporan</h5>
-                <div class="wrapper position-relative" style="width: max-content;">
+                {{-- <div class="wrapper position-relative" style="width: max-content;">
                     <button type="button"
                         class="button-other position-relative button-primary-blur d-flex align-items-center">
                         <img src="{{ asset('assets/img/button/filter.svg') }}" alt="Icon Filter"
@@ -49,7 +49,7 @@
                         <a href="{{ route('laporan.pajak') }}"
                             class="modal-link {{ Request::is('laporan/pajak') ? 'active' : '' }}">Pajak</a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <div class="row table-default">
@@ -71,21 +71,7 @@
                 @foreach ($laporans as $laporan)
                     <div class="col-12 table-row table-border">
                         <div class="row table-data gap-4 align-items-center">
-                            @if ($laporan->kategori_laporan == 'pelanggan')
-                                <div class="col col-lg-4 col-xl-5 data-value data-length">
-                                    {{ \App\Models\Pelanggan::where('id', $laporan->relations_id)->first()->nama }} telah
-                                    terdaftar menjadi salah satu pelanggan kami</div>
-                            @elseif ($laporan->kategori_laporan == 'sopir')
-                                <div class="col col-lg-4 col-xl-5 data-value data-length">
-                                    {{ \App\Models\Sopir::where('id', $laporan->relations_id)->first()->nama }} telah
-                                    terdaftar menjadi salah satu sopir kami</div>
-                            @elseif ($laporan->kategori_laporan == 'kendaraan')
-                                <div class="col col-lg-4 col-xl-5 data-value data-length">
-                                    {{ \App\Models\Kendaraan::where('id', $laporan->relations_id)->first()->stnk_nama }}
-                                    telah menyewakan kendaraannya dengan nomor
-                                    {{ \App\Models\Kendaraan::where('id', $laporan->relations_id)->first()->nomor_plat }}
-                                </div>
-                            @elseif ($laporan->kategori_laporan == 'booking')
+                            @if ($laporan->kategori_laporan == 'booking')
                                 <div class="col col-lg-4 col-xl-5 data-value data-length">
                                     Kendaraan
                                     {{ \App\Models\Pemesanan::where('id', $laporan->relations_id)->with('pelanggan')->first()->kendaraan->nomor_plat }}

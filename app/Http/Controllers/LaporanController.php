@@ -23,60 +23,60 @@ class LaporanController extends Controller
         if (auth()->user()->role == 'admin') {
             return view('laporan.index', [
                 'title' => 'Laporan',
-                'laporans' => Laporan::orderBy('created_at', 'DESC')->paginate(6),
+                'laporans' => Laporan::whereNotIn('kategori_laporan', ['pelanggan', 'sopir', 'kendaraan'])->orderBy('created_at', 'DESC')->paginate(6),
             ]);
         } elseif (auth()->user()->role == 'staff') {
             return view('laporan.index', [
                 'title' => 'Laporan',
-                'laporans' => Laporan::where('penggunas_id', auth()->user()->id)->orderBy('created_at', 'DESC')->paginate(6),
+                'laporans' => Laporan::where('penggunas_id', auth()->user()->id)->whereNotIn('kategori_laporan', ['pelanggan', 'sopir', 'kendaraan'])->orderBy('created_at', 'DESC')->paginate(6),
             ]);
         }
     }
 
-    public function laporanPelanggan()
-    {
-        if (auth()->user()->role == 'admin') {
-            return view('laporan.index', [
-                'title' => 'Laporan',
-                'laporans' => Laporan::where('kategori_laporan', 'pelanggan')->orderBy('created_at', 'DESC')->paginate(6),
-            ]);
-        } elseif (auth()->user()->role == 'staff') {
-            return view('laporan.index', [
-                'title' => 'Laporan',
-                'laporans' => Laporan::where('kategori_laporan', 'pelanggan')->where('penggunas_id', auth()->user()->id)->orderBy('created_at', 'DESC')->paginate(6),
-            ]);
-        }
-    }
+    // public function laporanPelanggan()
+    // {
+    //     if (auth()->user()->role == 'admin') {
+    //         return view('laporan.index', [
+    //             'title' => 'Laporan',
+    //             'laporans' => Laporan::where('kategori_laporan', 'pelanggan')->orderBy('created_at', 'DESC')->paginate(6),
+    //         ]);
+    //     } elseif (auth()->user()->role == 'staff') {
+    //         return view('laporan.index', [
+    //             'title' => 'Laporan',
+    //             'laporans' => Laporan::where('kategori_laporan', 'pelanggan')->where('penggunas_id', auth()->user()->id)->orderBy('created_at', 'DESC')->paginate(6),
+    //         ]);
+    //     }
+    // }
 
-    public function laporanSopir()
-    {
-        if (auth()->user()->role == 'admin') {
-            return view('laporan.index', [
-                'title' => 'Laporan',
-                'laporans' => Laporan::where('kategori_laporan', 'sopir')->orderBy('created_at', 'DESC')->paginate(6),
-            ]);
-        } elseif (auth()->user()->role == 'staff') {
-            return view('laporan.index', [
-                'title' => 'Laporan',
-                'laporans' => Laporan::where('kategori_laporan', 'sopir')->where('penggunas_id', auth()->user()->id)->orderBy('created_at', 'DESC')->paginate(6),
-            ]);
-        }
-    }
+    // public function laporanSopir()
+    // {
+    //     if (auth()->user()->role == 'admin') {
+    //         return view('laporan.index', [
+    //             'title' => 'Laporan',
+    //             'laporans' => Laporan::where('kategori_laporan', 'sopir')->orderBy('created_at', 'DESC')->paginate(6),
+    //         ]);
+    //     } elseif (auth()->user()->role == 'staff') {
+    //         return view('laporan.index', [
+    //             'title' => 'Laporan',
+    //             'laporans' => Laporan::where('kategori_laporan', 'sopir')->where('penggunas_id', auth()->user()->id)->orderBy('created_at', 'DESC')->paginate(6),
+    //         ]);
+    //     }
+    // }
 
-    public function laporanKendaraan()
-    {
-        if (auth()->user()->role == 'admin') {
-            return view('laporan.index', [
-                'title' => 'Laporan',
-                'laporans' => Laporan::where('kategori_laporan', 'kendaraan')->orderBy('created_at', 'DESC')->paginate(6),
-            ]);
-        } elseif (auth()->user()->role == 'staff') {
-            return view('laporan.index', [
-                'title' => 'Laporan',
-                'laporans' => Laporan::where('kategori_laporan', 'kendaraan')->where('penggunas_id', auth()->user()->id)->orderBy('created_at', 'DESC')->paginate(6),
-            ]);
-        }
-    }
+    // public function laporanKendaraan()
+    // {
+    //     if (auth()->user()->role == 'admin') {
+    //         return view('laporan.index', [
+    //             'title' => 'Laporan',
+    //             'laporans' => Laporan::where('kategori_laporan', 'kendaraan')->orderBy('created_at', 'DESC')->paginate(6),
+    //         ]);
+    //     } elseif (auth()->user()->role == 'staff') {
+    //         return view('laporan.index', [
+    //             'title' => 'Laporan',
+    //             'laporans' => Laporan::where('kategori_laporan', 'kendaraan')->where('penggunas_id', auth()->user()->id)->orderBy('created_at', 'DESC')->paginate(6),
+    //         ]);
+    //     }
+    // }
 
     public function laporanBooking()
     {
